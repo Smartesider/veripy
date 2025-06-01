@@ -1,0 +1,15 @@
+{
+  "navn": "valideringskrav.json",
+  "versjon": "2025-05-30",
+  "ai1_4": {
+    "aktiv": true,
+    "poengsystem": "1 poeng trekk for svakhet, 5 poeng for alvorlig feil eller manglende krav",
+    "automatisk_korrigering_ved_poengtap": 4,
+    "full_rapport": true
+  },
+  "krav": [
+    "Fullstendig sjekkliste per seksjon",
+    "Rapport om svakheter, feil og mulige forbedringer",
+    "Ekstra kontroll på karakterpersonlighet"
+  ]
+}

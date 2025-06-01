@@ -1,0 +1,117 @@
+{
+  "perfekt_artikkel": {
+    "struktur": {
+      "tittel": {
+        "krav": [
+          "Tabloid, engasjerende, naturlig norsk, aldri clickbait.",
+          "Hovednøkkelord tidlig, men ikke påtatt.",
+          "Aldri overdreven kapitalisering ('Rasende Gås på Bærtur' ikke 'Rasende Gås På Bærtur').",
+          "Aldri generisk – alltid tematisk og skreddersydd."
+        ]
+      },
+      "ingress": {
+        "krav": [
+          "2–4 linjer som lokker til videre lesning.",
+          "Kobler leseren følelsesmessig inn i temaet.",
+          "Hint om vinkel, konflikt, humor eller overraskelse.",
+          "Gjerne et retorisk spørsmål eller ironisk vri."
+        ]
+      },
+      "seksjoner": [
+        {
+          "navn": "Bakgrunn / Hva har skjedd?",
+          "krav": [
+            "Kort og poengtert: Hvem, hva, hvor, hvorfor, når.",
+            "Unngå oppramsing, gi kontekst med snert.",
+            "Lokale detaljer eller karakterreferanser brukes aktivt."
+          ]
+        },
+        {
+          "navn": "Hoveddel / Dramatisering",
+          "krav": [
+            "Visuell fortelling, bruk av dialog, sitater, humoristiske sammenligninger.",
+            "Bygger opp en rød tråd med naturlige cliffhangers.",
+            "Maksimalt 3–4 avsnitt per seksjon."
+          ]
+        },
+        {
+          "navn": "Ekspertuttalelser og rare innspill",
+          "krav": [
+            "Brukes alltid i Aukrust/Tulleavisa-stil – absurde fagfolk, lokal “ekspertise”, eller sære karakterer.",
+            "Innslag av kreativt språk og overdrevne titler.",
+            "Flett inn fiktive sitater eller meningsytringer fra ‘kjente’ Tulleavisa-karakterer."
+          ]
+        },
+        {
+          "navn": "Sitat fra folk flest / Publikum",
+          "krav": [
+            "Spør alltid “mannen i gata” – gjerne barn, dyr, eller lokale helter.",
+            "Gjengiv aldri et kjedelig sitat, alltid en snert av ironi, underdrivelse eller forvikling.",
+            "Lokale dialektord og uttrykk må være med."
+          ]
+        },
+        {
+          "navn": "Konsekvens / Hva nå?",
+          "krav": [
+            "Hva betyr saken for leseren og stedet?",
+            "Ta alltid utgangspunkt i lokal virkelighet og fremtidig tull.",
+            "Humoristisk blikk på “alvoret” – tullekonklusjon aksepteres."
+          ]
+        },
+        {
+          "navn": "Avslutning / Oppsummering",
+          "krav": [
+            "Oppsummer essensen på under 3 linjer.",
+            "Avslutt alltid med et overraskende poeng, tulle-citat eller absurditet.",
+            "Oppfordring til å lese mer, dele, eller sende inn egne historier."
+          ]
+        }
+      ],
+      "spesialelementer": [
+        "Store mellomrom og tydelige seksjonsoverskrifter.",
+        "Scroll-stoppende overskrifter og mellomtitler med humoristisk vri.",
+        "Punktlister, tabeller eller visuelle elementer som bryter teksten.",
+        "Luftig layout, gjerne med illustrasjoner.",
+        "Konsekvent, enkel setningsstruktur.",
+        "‘Les også’-bokser mellom avsnitt for å lede videre.",
+        "Bruk av fete ord og kursiv for å fremheve poeng eller vitser.",
+        "“Visste du at?”-bokser med kuriøse, relevante eller absurde fakta.",
+        "Mini-intervjuer eller feltboks fra karakterer.",
+        "Forklaring på lokale dialektord direkte i teksten (f.eks. hover tooltip eller parentes).",
+        "“Send inn din historie”-modul for publikumsbidrag, sendes til tips@tulleavisa.no.",
+        "Poetiske, sjarmerende og lett absurde sammenligninger i tekst.",
+        "Fiktive eksperter med overdrevne titler.",
+        "Bruk av lokale navn og tullenavn fra Pjuskeby og redaksjonens univers.",
+        "Alltid et snev av vemod, snusfornuft og kjærlighet til det små.",
+        "Karaktergjennomgang – referanser til andre artikler og karakterer.",
+        "Aldri stivt eller byråkratisk språk – kun lun, varm og leken fortellerstil.",
+        "Inkluder fast signatur eller ‘redaktørens merknad’.",
+        "Retoriske spørsmål i ingress og avslutning.",
+        "Overraskende ‘cliffhangers’ før seksjonsskift.",
+        "Absurd logikk eller umulige konklusjoner (“Derfor får vi kanskje se flyvende elg til jul…”).",
+        "Tilfeldig utvalgt ‘Dagens leserpoeng’ eller ‘Tulle-trofe’."
+      ],
+      "lengde": {
+        "minimum_ord": 450,
+        "maksimum_ord": 1200,
+        "anbefalt_ord": "600-900",
+        "avsnitt": "2–5 linjer per avsnitt, ofte brutt opp av sitater og bokser."
+      },
+      "overskrifter": {
+        "struktur": [
+          "Alltid H1 for hovedtittel, H2 for seksjoner, evt. H3 for underpunkter.",
+          "Hver seksjon starter med en tydelig og fristende H2.",
+          "Bruk gjerne ordspill eller lokale referanser, aldri klisjeer."
+        ]
+      },
+      "utseende": {
+        "krav": [
+          "Luftig layout, tydelige mellomrom, mange seksjoner og bokser.",
+          "Store siterte uttalelser visuelt skilt ut.",
+          "Illustrasjoner eller bilder tilpasset temaet.",
+          "Farger og fonter inspirert av Aukrusts visuelle univers."
+        ]
+      }
+    }
+  }
+}

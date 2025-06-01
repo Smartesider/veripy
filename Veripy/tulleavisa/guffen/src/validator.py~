@@ -1,0 +1,314 @@
+import os
+import json
+import difflib
+import shutil
+import time
+import psutil
+from datetime import datetime
+
+# ----------- Hjelpefunksjoner for fil og katalog -----------
+def ensure_dir_exists(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+def ensure_file_exists(path, default_content=None):
+    if not os.path.exists(path):
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(default_content or {}, f, ensure_ascii=False, indent=2)
+
+def load_json(filename):
+    path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "json", filename)
+    if not os.path.exists(path):
+        ensure_file_exists(path)
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def save_json(data, filename):
+    ensure_dir_exists(os.path.dirname(filename) or ".")
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def load_local_json(filename):
+    if os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+def append_log(data, path):
+    ensure_dir_exists(os.path.dirname(path) or ".")
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(data, ensure_ascii=False) + "\n")
+
+def get_article_diff(old, new):
+    old_text = json.dumps(old, ensure_ascii=False, indent=2).splitlines()
+    new_text = json.dumps(new, ensure_ascii=False, indent=2).splitlines()
+    diff = difflib.unified_diff(old_text, new_text, fromfile="forrige", tofile="ny", lineterm="")
+    return "\n".join(diff)
+
+def check_format(text, tullenavn, ektenavn):
+    return f"{tullenavn} ({ektenavn})" in text
+
+def check_all_formats(text, liste, tullefelt, ektefelt, label):
+    feil = []
+    texts = [text] if isinstance(text, str) else (text if isinstance(text, list) else [])
+    for item in liste:
+        tullenavn = item.get(tullefelt, "")
+        ektenavn = item.get(ektefelt, "")
+        if tullenavn and ektenavn:
+            found = any(check_format(t, tullenavn, ektenavn) for t in texts)
+            if not found:
+                feil.append(f"Omtale av {label} '{ektenavn}' må bruke format: {tullenavn} ({ektenavn})")
+    return feil
+
+def pedagogisk_guide(rapport):
+    guides = []
+    if rapport["feil"]:
+        guides.append(
+            "Rett ALLE feil før innsending. Feil kan være: manglende felter, feil i navn/format, feil kilde eller manglende SEO."
+        )
+    if rapport["svakheter"]:
+        guides.append("Forbedre svakheter: SEO, variasjon i språk, flere kreative elementer eller bruk flere json-kilder.")
+    if not rapport["feil"] and not rapport["svakheter"]:
+        guides.append("Ingen feil eller svakheter funnet – artikkelen er klar til publisering!")
+    guides.append(
+        "Eksempel: Alle navn skal følge formatet {tullenavn} ({ektenavn}) – se bedrifter.json, land.json osv. for tulle- og ektenavn."
+    )
+    return guides
+
+# ----------- "Second Opinion" AI-støtte -----------
+def second_opinion_ai(rapport):
+    # Dummy-funksjon: Kjør faktisk AI-kall her i produksjon!
+    # KUN flagge ekstra svakheter/utelatelser – aldri redusere strenghet.
+    funnet = []
+    # Eksempel: AI ser etter tekst som kan være for generell/ikke valideres av første validator
+    if "innhold" in rapport.get("artikkel", {}):
+        innhold = rapport["artikkel"]["innhold"].lower()
+        if "fantastisk" in innhold and "konkret eksempel" not in innhold:
+            funnet.append("Andrehåndsvalidering: Bruk konkrete eksempler i stedet for generelle superlativer.")
+    return funnet
+
+# ----------- "Critical Change"-overvåkning -----------
+def critical_change_check(rapport, kritisk_state_path="kritisk_validerings_state.json"):
+    # Lagre og sammenlign en "strenghetsprofil" for valideringen (f.eks. antall sjekker, feil, feltnavn)
+    curr_state = {
+        "antall_feil": len(rapport["feil"]),
+        "feil_felter": sorted([f.split(":")[0] for f in rapport["feil"] if ":" in f]),
+        "obligatoriske": sorted([f for f in rapport["artikkel"].keys()]),
+        "runde": rapport["meta"].get("runde", 1)
+    }
+    prev_state = load_local_json(kritisk_state_path)
+    critical_flag = False
+    if prev_state:
+        # Hvis nåværende rapport har færre feil eller sjekker enn før uten god grunn – flagg!
+        if curr_state["antall_feil"] < prev_state["antall_feil"]:
+            critical_flag = True
+    save_json(curr_state, kritisk_state_path)
+    return critical_flag
+
+# ----------- No-Regression-sjekk -----------
+def no_regression_check(rapport, prev_oppgave):
+    if not prev_oppgave:
+        return []
+    regression_issues = []
+    # Sjekk at ingen tidligere feil/svakheter havner som "sannsynlig ok" uten faktisk å være rettet (dummy check, kan utvides)
+    for feiltekst in prev_oppgave.get("feil", []):
+        if feiltekst not in rapport["feil"] and feiltekst not in rapport.get("sannsynlig_ok", []):
+            regression_issues.append(f"Feil '{feiltekst}' tidligere funnet, men ikke beviselig rettet!")
+    for svaktekst in prev_oppgave.get("svakheter", []):
+        if svaktekst not in rapport["svakheter"] and svaktekst not in rapport.get("sannsynlig_ok", []):
+            regression_issues.append(f"Svakhet '{svaktekst}' tidligere funnet, men ikke beviselig rettet!")
+    return regression_issues
+
+# ---------------- MAIN VALIDATOR ---------------
+def validate_article(article):
+    start_time = time.time()
+    process = psutil.Process(os.getpid())
+    start_mem = process.memory_info().rss
+
+    rapport = {
+        "status": "OK",
+        "feil": [],
+        "svakheter": [],
+        "forbedringer": [],
+        "meta": {},
+        "ai_guide": [],
+        "intern_qalog": [],
+        "artikkel": article
+    }
+
+    # Sjekk at json-katalog finnes
+    json_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "json")
+    ensure_dir_exists(json_path)
+
+    kravfiler = [
+        "artikkelkrav.json", "aviser.json", "kildekrav.json", "bedrifter.json",
+        "gatenavn.json", "innsjo.json", "land.json", "ledere.json", "organisasjoner.json",
+        "pjuskebysverden.json", "rundtpjuskeby.json", "sport.json", "turister.json",
+        "seo.json", "sluttprodukt.json"
+    ]
+    kravdata = {}
+    for fil in kravfiler:
+        path = os.path.join(json_path, fil)
+        if not os.path.exists(path):
+            ensure_file_exists(path, default_content=[])
+        kravdata[fil] = load_json(fil) if os.path.exists(path) else None
+
+    # 1. artikkelkrav.json – alle obligatoriske felter
+    artikkelkrav = kravdata["artikkelkrav.json"] or {}
+    for kravfelt in artikkelkrav.get("obligatoriske_felter", []):
+        if kravfelt not in article or not article[kravfelt]:
+            rapport["feil"].append(f"Mangler obligatorisk felt: {kravfelt}")
+
+    # 2. aviser.json & kildekrav.json – sjekk kilde
+    kilde = article.get("kilde", "")
+    aviser = kravdata["aviser.json"] or []
+    kildekrav = kravdata["kildekrav.json"] or {}
+    aviser_liste = [x.get("navn", "") for x in aviser]
+    if not kilde:
+        rapport["feil"].append("Artikkelen mangler kilde.")
+    elif kilde not in aviser_liste:
+        rapport["feil"].append(f"Kilde '{kilde}' er ikke godkjent avis iht. aviser.json.")
+    for krav in kildekrav.get("krav", []):
+        if krav == "må ha url" and not article.get("kilde_url", ""):
+            rapport["feil"].append("Kilde mangler url.")
+
+    # 3. Samtlige json-filer – entitets- og formatkontroller
+    def fulltekstfelt():
+        felt = []
+        for key in article:
+            if isinstance(article[key], str):
+                felt.append(article[key])
+            elif isinstance(article[key], list):
+                felt += [str(x) for x in article[key]]
+        return felt
+
+    tekstfelter = fulltekstfelt()
+    for filnavn, label, tullefelt, ektefelt in [
+        ("bedrifter.json", "bedrift", "Tullenavn", "Ektenavn"),
+        ("gatenavn.json", "gatenavn", "Tullenavn", "Ektenavn"),
+        ("innsjo.json", "innsjø", "Tullenavn", "Ektenavn"),
+        ("land.json", "land", "Tullenavn", "Ektenavn"),
+        ("ledere.json", "leder", "Tullenavn", "Ektenavn"),
+        ("organisasjoner.json", "organisasjon", "Tullenavn", "Ektenavn"),
+        ("pjuskebysverden.json", "sted", "Tullenavn", "Ektenavn"),
+        ("rundtpjuskeby.json", "rundt_sted", "navn", "beskrivelse"),
+        ("sport.json", "sport", "Tullenavn", "Ektenavn"),
+        ("turister.json", "turistattraksjon", "Tullenavn", "Ektenavn"),
+    ]:
+        if kravdata[filnavn]:
+            rapport["feil"] += check_all_formats(
+                tekstfelter, kravdata[filnavn], tullefelt, ektefelt, label
+            )
+
+    # 4. seo.json og sluttprodukt.json
+    if kravdata["seo.json"]:
+        seo = kravdata["seo.json"]
+        for ord in seo.get("nøkkelord", []):
+            if not any(ord in t for t in tekstfelter):
+                rapport["svakheter"].append(f"SEO-nøkkelord '{ord}' mangler i innhold.")
+
+    if kravdata["sluttprodukt.json"]:
+        sluttkrav = kravdata["sluttprodukt.json"]
+        for krav in sluttkrav.get("krav", []):
+            if not any(krav in t for t in tekstfelter):
+                rapport["svakheter"].append(f"Sluttproduktkrav '{krav}' ikke oppfylt i innhold.")
+
+    rapport["ai_guide"] = pedagogisk_guide(rapport)
+    rapport["meta"]["antall_feil"] = len(rapport["feil"])
+    rapport["meta"]["antall_svakheter"] = len(rapport["svakheter"])
+    rapport["meta"]["tid"] = datetime.now().isoformat()
+    rapport["meta"]["runde"] = load_local_json("oppgave.json")["meta"]["runde"] + 1 if load_local_json("oppgave.json") else 1
+
+    # Ressursbruk og AI-tokens (dummy for AI-tokens, legg til reell tracking om du bruker GPT etc.)
+    elapsed_time = time.time() - start_time
+    end_mem = process.memory_info().rss
+    ai_tokens = article.get("ai_tokens", 0)
+    rapport["meta"]["ressursbruk"] = {
+        "kjøretid_sek": round(elapsed_time, 3),
+        "minne_MB": round((end_mem - start_mem) / (1024 * 1024), 3),
+        "ai_tokens_brukt": ai_tokens
+    }
+
+    # ------------------- QA & TILSYN ------------------------
+    prev_oppgave = load_local_json("oppgave.json")
+    rapport["sannsynlig_ok"] = []
+    if prev_oppgave:
+        for feiltekst in prev_oppgave.get("feil", []):
+            if feiltekst not in rapport["feil"]:
+                rapport["sannsynlig_ok"].append(feiltekst)
+        for svaktekst in prev_oppgave.get("svakheter", []):
+            if svaktekst not in rapport["svakheter"]:
+                rapport["sannsynlig_ok"].append(svaktekst)
+        artikkel_diff = get_article_diff(prev_oppgave.get("artikkel", {}), article)
+        rapport["diff"] = artikkel_diff
+        rapport["forrige_rapport"] = prev_oppgave
+    else:
+        rapport["diff"] = "Første runde"
+        rapport["forrige_rapport"] = {}
+
+    # Second Opinion AI (internt): Kun skjerpelser
+    so_ai_findings = second_opinion_ai(rapport)
+    if so_ai_findings:
+        rapport["intern_qalog"].append({
+            "second_opinion_ai": so_ai_findings
+        })
+
+    # No-regression check (internt): nekter å fjerne feil/svakhet fra tidligere runde uten at de er reelt rettet
+    regression_issues = no_regression_check(rapport, prev_oppgave)
+    if regression_issues:
+        rapport["intern_qalog"].append({
+            "no_regression_issues": regression_issues
+        })
+        # Gjeninnfører alle tidligere feil/svakheter om ikke beviselig løst
+        for issue in regression_issues:
+            if "Feil '" in issue:
+                tekst = issue.split("Feil '")[1].split("'")[0]
+                if tekst not in rapport["feil"]:
+                    rapport["feil"].append(tekst)
+            if "Svakhet '" in issue:
+                tekst = issue.split("Svakhet '")[1].split("'")[0]
+                if tekst not in rapport["svakheter"]:
+                    rapport["svakheter"].append(tekst)
+        rapport["status"] = "FEIL"
+
+    # Critical Change-deteksjon (internt): Hvis validering blir mindre streng
+    critical_flag = critical_change_check(rapport)
+    if critical_flag:
+        rapport["intern_qalog"].append({
+            "critical_change": "Systemet har potensielt blitt mindre strengt enn før – manuell QA/tilsyn kreves!"
+        })
+        # Sett status til kritisk slik at denne ikke kan auto-godkjennes
+        rapport["status"] = "KRITISK_QA"
+
+    if rapport["feil"]:
+        rapport["status"] = "FEIL"
+    elif rapport["svakheter"]:
+        rapport["status"] = "SVAKHET"
+    elif not regression_issues and not critical_flag:
+        rapport["status"] = "OK"
+
+    # --- LOGGING OG OPPGAVEFIL ---
+    revisjon_dir = "logg"
+    ensure_dir_exists(revisjon_dir)
+    revisjonlogg_path = os.path.join(
+        revisjon_dir,
+        f"{datetime.now().strftime('%Y%m%d')}-artikkelrevisjon.log"
+    )
+    append_log({
+        "tid": datetime.now().isoformat(),
+        "artikkel": article,
+        "rapport": rapport
+    }, revisjonlogg_path)
+
+    # Skriv rapporten som oppgave.json med "artikkel"
+    save_json({**rapport, "artikkel": article}, "oppgave.json")
+
+    # Hvis status OK: Arkiver og slett
+    if rapport["status"] == "OK":
+        arkivfil = os.path.join(
+            revisjon_dir,
+            f"ferdig_{datetime.now().strftime('%Y%m%d_%H%M%S')}-artikkel.json"
+        )
+        shutil.move("oppgave.json", arkivfil)
+
+    return rapport

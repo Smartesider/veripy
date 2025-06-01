@@ -1,0 +1,38 @@
+{
+  "navn": "chatkrav.json",
+  "versjon": "2025-05-30",
+  "chatvisning": {
+    "status_og_validering": [
+      "Totalt antall ord",
+      "Antall ord per seksjon",
+      "Liste over oppfylte krav",
+      "Liste over mangler/avvik",
+      "Neste steg hvis mangler"
+    ],
+    "ai1_4": {
+      "aktiv": true,
+      "kreve_full_evaluering": true
+    },
+    "vis_kun_i_chat": [
+      {
+        "kategori": "design",
+        "innhold": "Illustrasjonsstil, alt-tekst, caption, description"
+      },
+      {
+        "kategori": "seo",
+        "innhold": "meta-beskrivelse, lsi-nøkkelord, hashtags, structured_data"
+      }
+    ]
+  },
+  "ikke_i_canvas": [
+    "Rå tekst/strukturforklaring",
+    "Interne valideringslogger",
+    "Forklaring av brukte json-filer",
+    "Tekniske detaljer om generering",
+    "SEO-sjekklister"
+  ],
+  "visningsrekkefolge": [
+    "Validering først, artikkel etterpå – aldri begge samtidig",
+    "Feil eller mangler må rettes før artikkel vises"
+  ]
+}

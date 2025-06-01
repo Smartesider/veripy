@@ -1,0 +1,28 @@
+{
+  "navn": "artikkelkrav.json",
+  "versjon": "2025-05-30",
+  "struktur": [
+    {"seksjon": "SEO-tittel", "krav": "Tabloid, inkluder tullenavn (ektenavn) for sted/land/organisasjon hvis mulig."},
+    {"seksjon": "Byline", "krav": "Fast format: 'Av [NAVN] – [rolle/biografi]', uten emoji."},
+    {"seksjon": "Innleiing", "krav": "Lokal, dramatisk og karakteristisk for stil (f.eks. trøndersk for Frode). Minst 100 ord."},
+    {"seksjon": "H2-overskrifter", "krav": "Scrollstoppere, max 9 ord, alltid geografisk/tema-koblet."},
+    {"seksjon": "Hoveddel", "krav": "Minst 4 seksjoner, hver 100–150 ord. Inkluder by, land, leder, organisasjon hentet fra json hvis relevant."},
+    {"seksjon": "Avslutning", "krav": "Emosjonell og apokalyptisk, lokal vri."},
+    {"seksjon": "Kilder", "krav": "Alltid ekte og/eller tullekilde, klikkbar og med humoristisk begrunnelse."},
+    {"seksjon": "TikTok/Reels-oppsummering", "krav": "Kort, punchy oppsummering for sosiale medier."},
+    {"seksjon": "CTA", "krav": "Plasseres tydelig som egen seksjon midt eller mot slutten av artikkelen. Teksten skal være kort, gal og umulig å overse. Må inneholde en absurd/ny type handling, ikke bare 'del på Facebook'."}
+  ],
+  "forfatterbio": {
+    "krav": "50 ord, alltid i karakterens egen stil og språk."
+  },
+  "ordkrav": {
+    "total": 1000,
+    "seksjon_min": 100,
+    "seksjon_max": 150
+  },
+  "validering": {
+    "telle_ord": true,
+    "sjekkliste": true,
+    "ingen_visning_før_krav_ok": true
+  }
+}

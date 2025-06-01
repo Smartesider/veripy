@@ -1,0 +1,157 @@
+{
+  "artikkelkrav": {
+    "meta": {
+      "tittel": {
+        "krav": [
+          "Maks 60 tegn, inneholder hovednøkkelord tidlig.",
+          "Reflekterer artikkelens faktiske innhold.",
+          "Bruker ordvalg folk faktisk søker etter.",
+          "Unngå clickbait, men vær tabloid.",
+          "Hovednøkkelord skal være på korrekt norsk, ikke overdreven kapitalisering."
+        ]
+      },
+      "beskrivelse": {
+        "krav": [
+          "Mellom 120-160 tegn, inkluderer hovednøkkelord.",
+          "Oppsummerer artikkelens poeng presist.",
+          "Inkluderer lokalitetsnavn dersom relevant.",
+          "Oppfordrer til handling eller nysgjerrighet."
+        ]
+      },
+      "url": {
+        "krav": [
+          "Kort, lesbar og inkluderer hovednøkkelord.",
+          "Bruk bindestrek mellom ord.",
+          "Unngå unødvendige parametere.",
+          "Automatisk lokalnavn hvis lokal sak."
+        ]
+      }
+    },
+    "innhold": {
+      "innledning": {
+        "krav": [
+          "Fanger oppmerksomheten de første 2 setningene.",
+          "Hovednøkkelord og varianter nevnes naturlig.",
+          "Oppgir hvorfor saken er aktuell nå.",
+          "Gir hint om lokal forankring og betydning."
+        ]
+      },
+      "brødtekst": {
+        "krav": [
+          "Inndelt i logiske seksjoner med H2/H3-overskrifter.",
+          "LSI-nøkkelord integreres naturlig gjennom teksten.",
+          "Minimum én tabell eller punktliste ved større saker.",
+          "Korte, varierende avsnitt (2–5 linjer).",
+          "Inkluderer sitater, fakta og evt. lokale kilder.",
+          "Lokalnavn, navn, hendelser kobles mot lokale søkebegreper."
+        ]
+      },
+      "avslutning": {
+        "krav": [
+          "Oppsummerer de viktigste funnene.",
+          "Gjentar hovednøkkelord naturlig.",
+          "Oppfordrer til deling, kommentarer, eller videre lesning.",
+          "Evt. CTA (Call-to-Action) med lenke til relevante artikler."
+        ]
+      }
+    },
+    "bilder": {
+      "krav": [
+        "Minst ett originalt bilde per artikkel.",
+        "ALT-tekst og bildetekst skal inneholde nøkkelord og lokal tilknytning.",
+        "Filnavn optimalisert for SEO (f.eks. hovedord-sted-dato.jpg)."
+      ]
+    },
+    "struktur": {
+      "overskrifter": {
+        "krav": [
+          "H1 for hovedtittel, H2/H3 for seksjoner.",
+          "Nøkkelord i minst én overskrift per nivå.",
+          "Ingen dupliserte overskrifter.",
+          "Overskrifter må være meningsbærende og fristende.",
+          "Ingen overskrifter skal ha overdreven bruk av store bokstaver («Dette Var Gøy» er feil, «Dette var gøy» er korrekt)."
+        ]
+      },
+      "interne_lenker": {
+        "krav": [
+          "Minst to interne lenker til relevante saker på samme nettsted.",
+          "Lenketekst optimalisert for naturlig søk.",
+          "Minst én lenke til hovedkategori eller hovedside."
+        ]
+      },
+      "eksterne_lenker": {
+        "krav": [
+          "Minst én ekstern lenke til autoritativ, relevant kilde.",
+          "Eksterne lenker skal åpne i nytt vindu og ha rel=’noopener’."
+        ]
+      }
+    },
+    "nøkkelord_og_lsi": {
+      "hovednøkkelord": {
+        "krav": [
+          "Brukes i tittel, meta, innledning, ett mellomavsnitt, og avslutning.",
+          "Naturlig integrert – ikke keyword stuffing."
+        ]
+      },
+      "lsi_nøkkelord": {
+        "krav": [
+          "Identifiser minst 3–5 relaterte søkeord/fraser.",
+          "Bruk dem naturlig i brødtekst og mellomtitler.",
+          "Synonymer og relevante variasjoner skal brukes for å treffe bredere søk."
+        ]
+      }
+    },
+    "søkemotor- og leservennlighet": {
+      "krav": [
+        "Korte setninger og avsnitt.",
+        "Bruk av punktlister og tabeller der relevant.",
+        "Skriftlig på B1-B2-nivå (folk flest forstår).",
+        "Unngå fagbegreper uten forklaring."
+      ]
+    },
+    "aio_optimalisering": {
+      "krav": [
+        "Bruk naturlig språk som også kan forstås av AI.",
+        "Strukturer innhold slik at det kan hentes ut til featured snippets.",
+        "Marker spørsmål og svar tydelig for PAA (People Also Ask) bokser.",
+        "Integrer skjema.org-struktur dersom teknisk mulig."
+      ]
+    },
+    "delingsoptimalisering": {
+      "krav": [
+        "Delingsknapper synlig plassert.",
+        "Sosial meta (OpenGraph og Twitter Card) korrekt utfylt.",
+        "Tittel og bilde optimalisert for deling på sosiale medier.",
+        "Oppfordring til å dele eller kommentere nederst."
+      ]
+    },
+    "lokal_tilhørighet": {
+      "krav": [
+        "Sted, navn, geografi skal matche lokale søk og skrives på norsk.",
+        "Lokale uttrykk og særpreg brukes når naturlig.",
+        "Lenke til lokal informasjon/kategori.",
+        "Kort lokalhistorisk fakta hvis relevant."
+      ]
+    },
+    "analyse_og_rapportering": {
+      "krav": [
+        "Automatisk rapport om nøkkelordsdekning.",
+        "Forslag til forbedringer av synlighet og deling.",
+        "Sjekkliste for alt over – automatisk validering før publisering."
+      ]
+    },
+    "ekstra_elementer": {
+      "krav": [
+        "FAQ-seksjon: Egne spørsmål/svar under artikkelen for å treffe Google PAA-bokser.",
+        "Mini-biografi om journalisten: Skaper troverdighet og personlig touch.",
+        "Kommentarer fra lokale innbyggere: Sitat fra gateplan.",
+        "Lenke til lokale foreninger eller organisasjoner nevnt i artikkelen.",
+        "Bruk av lokale dialektord i sitater (med forklaring).",
+        "Integrering av lokalt vær, trafikk eller arrangementskalender.",
+        "Spesiallagde lokale emneknagger for deling på sosiale medier.",
+        "Kort «Visste du at?»-fakta om stedet eller temaet.",
+        "Tydelig «publisert av AI» dersom relevant (åpenhet om innhold)."
+      ]
+    }
+  }
+}

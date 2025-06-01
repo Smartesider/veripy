@@ -1,0 +1,8 @@
+2025-05-31T12:00:58.604573 | REQUEST_FAIL | 127.0.0.1 | Feil i JSON: Expecting value: line 1 column 1 (char 0)
+2025-05-31T12:02:22.621080 | VALIDATION_OK | 127.0.0.1 | Artikkel validert
+2025-05-31T12:05:27.334871 | REQUEST_FAIL | 127.0.0.1 | Feil i JSON: Expecting value: line 1 column 1 (char 0)
+2025-05-31T12:06:34.487890 | VALIDATION_OK | 127.0.0.1 | Artikkel validert
+2025-05-31T12:42:08.381175 | VALIDATION_OK | 127.0.0.1 | Artikkel validert
+2025-05-31T12:51:28.163225 | VALIDATION_FAIL | 127.0.0.1 | Valideringsfeil: 'str' object has no attribute 'get'
+2025-05-31T13:11:48.579756 | VALIDATION_FAIL | 127.0.0.1 | Valideringsfeil: 'str' object has no attribute 'get'
+2025-05-31T13:13:51.973198 | VALIDATION_OK | 127.0.0.1 | Artikkel validert

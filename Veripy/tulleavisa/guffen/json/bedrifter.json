@@ -1,0 +1,713 @@
+{
+  "sted": "Pjuskeby",
+  "beskrivelse": "Kavalkade på 100 bedrifter i ekte Kjell Aukrust-ånd fra Pjuskeby, i Tulleavisa-format",
+  "bedrifter": [
+    {
+      "id": 1,
+      "navn": "Røyk og Rabalder Verksted",
+      "adresse": "Kruttgaten 13",
+      "beskrivelse": "Reparerer alt fra potte til dampmaskin (men oftest sprengstoff)",
+      "eier": "Brannmann Bare-Heff"
+    },
+    {
+      "id": 2,
+      "navn": "Fjas & Fjong Frisørsalong",
+      "adresse": "Snurpestien 2",
+      "beskrivelse": "Barberer grå hår og får naboer til å gråte av latter",
+      "eier": "Klipp-Knut"
+    },
+    {
+      "id": 3,
+      "navn": "Rasle'n Barnevognservice",
+      "adresse": "Rullendevei 8",
+      "beskrivelse": "Sjekker hjulene, bytter bremser og aksepterer betaling i kjeks",
+      "eier": "Vaffel-Vera"
+    },
+    {
+      "id": 4,
+      "navn": "Susemi'n Sykkelstall",
+      "adresse": "Tråkktrappen 5",
+      "beskrivelse": "Puster nytt liv i rustne kjedekrøll",
+      "eier": "Pedal-Pål"
+    },
+    {
+      "id": 5,
+      "navn": "Tjommi'n Tannpusser'n",
+      "adresse": "Munnvikveien 11",
+      "beskrivelse": "Polerer tennene dine så de blinker i måneskinn",
+      "eier": "Smykkesus-Tor"
+    },
+    {
+      "id": 6,
+      "navn": "Bråkebøtte Bar & Grill",
+      "adresse": "Larmen 7",
+      "beskrivelse": "Serverer burgere som skriker av smak og øl med ekko",
+      "eier": "Tut-Ola"
+    },
+    {
+      "id": 7,
+      "navn": "Snublefot Sko & Skotøysreparasjon",
+      "adresse": "Snublestredet 4",
+      "beskrivelse": "Syr på såler som får deg til å gå i loop",
+      "eier": "Sål-Sølvi"
+    },
+    {
+      "id": 8,
+      "navn": "Tøysekroken Strikk & Sy",
+      "adresse": "Nålestikkalleen 9",
+      "beskrivelse": "Strikker sokker som aldri blir par",
+      "eier": "Tråd-Trine"
+    },
+    {
+      "id": 9,
+      "navn": "Rabalder Rør og Radiator",
+      "adresse": "Lekkasjeloopen 3",
+      "beskrivelse": "Fikser alt som drypper… og noen ganger bader du i det",
+      "eier": "Våt-Verner"
+    },
+    {
+      "id": 10,
+      "navn": "Glimt & Gjall Gamle Filmklipp",
+      "adresse": "Nostalgibakken 6",
+      "beskrivelse": "Viser bortgjemte skrekkeksplosioner fra 1920",
+      "eier": "Revy-Ragnar"
+    },
+    {
+      "id": 11,
+      "navn": "Fesk og Fjas Fiskeutsalg",
+      "adresse": "Sjøsprøytteveien 10",
+      "beskrivelse": "Selger fisk som klager på varmen",
+      "eier": "Røde-Rudi"
+    },
+    {
+      "id": 12,
+      "navn": "Sprøsalat Gartneri",
+      "adresse": "Planteplektersvingen 12",
+      "beskrivelse": "Dyrker grønnsaker som dyrker deg",
+      "eier": "Rot-Reidun"
+    },
+    {
+      "id": 13,
+      "navn": "Klukkende Kaffekokeri",
+      "adresse": "Kaffekvernveien 1",
+      "beskrivelse": "Brygger så sterkt at du våkner før drømmen",
+      "eier": "Bønne-Berit"
+    },
+    {
+      "id": 14,
+      "navn": "Frislepp Fabrikkutsalg",
+      "adresse": "Lattergata 14",
+      "beskrivelse": "Selger fleip og fanteri i løs vekt",
+      "eier": "Jokk-Jon"
+    },
+    {
+      "id": 15,
+      "navn": "Tøyse-Taxi",
+      "adresse": "Kaosmotorveien 17",
+      "beskrivelse": "Kjører deg vill med vilje (tur-retur samme sted)",
+      "eier": "Ratt-Ragnhild"
+    },
+    {
+      "id": 16,
+      "navn": "Sprinkel Sprøyte & Såleverksted",
+      "adresse": "Jinglejanglebakken 18",
+      "beskrivelse": "Luftputespray for stillesitting",
+      "eier": "Luft-Ludvig"
+    },
+    {
+      "id": 17,
+      "navn": "Skramle & Skru Elektromekanikk",
+      "adresse": "Gnistgaten 20",
+      "beskrivelse": "Bytter lyspærer så de blafrer optimalt",
+      "eier": "Stikk-Kristian"
+    },
+    {
+      "id": 18,
+      "navn": "Tulle-Terapi Senter",
+      "adresse": "Klovnegata 22",
+      "beskrivelse": "Gir latterlig gode råd (eller ler av dine problemer)",
+      "eier": "Smil-Silje"
+    },
+    {
+      "id": 19,
+      "navn": "Drømm & Drama Dukkemakeri",
+      "adresse": "Puppelhjulet 21",
+      "beskrivelse": "Lager dukker med ekte håndsprit",
+      "eier": "Kose-Kirsten"
+    },
+    {
+      "id": 20,
+      "navn": "Snerr & Snøft Dyreklinikken",
+      "adresse": "Pelsveien 23",
+      "beskrivelse": "Behandler alle dyr med bisarre historier",
+      "eier": "Veterinær-Vimpel"
+    },
+    {
+      "id": 21,
+      "navn": "Guff & Gru Gravferdshus",
+      "adresse": "Stillhetsstien 30",
+      "beskrivelse": "Ordner siste avskjed med feststemt begravelsesmatorg",
+      "eier": "Kiste-Kjell"
+    },
+    {
+      "id": 22,
+      "navn": "Pjuskeby Plantebar",
+      "adresse": "Drømmelunden 29",
+      "beskrivelse": "Bar for grønne fingre og høye planter",
+      "eier": "Bladhilda"
+    },
+    {
+      "id": 23,
+      "navn": "Fjell & Fjord Fjellklatring",
+      "adresse": "Stupaskråningen 31",
+      "beskrivelse": "Tar deg til nye høyder… og paniske toalettbesøk",
+      "eier": "Tau-Torstein"
+    },
+    {
+      "id": 24,
+      "navn": "Jåleri & Jabb Klær",
+      "adresse": "Sminkesmauet 27",
+      "beskrivelse": "Designer kostymer til naboens katt",
+      "eier": "Pels-Perle"
+    },
+    {
+      "id": 25,
+      "navn": "Rumle & Ratt Motorverksted",
+      "adresse": "Eksosveien 33",
+      "beskrivelse": "Gir bilen din nytt liv… eller eksplosiv død",
+      "eier": "Diesel-Daniel"
+    },
+    {
+      "id": 26,
+      "navn": "Fniseriet Konditori",
+      "adresse": "Sukkerløkka 35",
+      "beskrivelse": "Baker kaker som fniser når du biter",
+      "eier": "Glasur-Guri"
+    },
+    {
+      "id": 27,
+      "navn": "Ståhei & Støy Lydstudio",
+      "adresse": "Hylbillgata 36",
+      "beskrivelse": "Mixer musikk som gir naboen tinnitus",
+      "eier": "Bass-Bjørn"
+    },
+    {
+      "id": 28,
+      "navn": "Raseri & Rimpoesi Skriveverksted",
+      "adresse": "Blekkbakken 38",
+      "beskrivelse": "Lærer deg å skrive dikt som skremmer",
+      "eier": "Ord-Ola"
+    },
+    {
+      "id": 29,
+      "navn": "Tveegg & Tjafs Sverd & Lys",
+      "adresse": "Flambeaugata 40",
+      "beskrivelse": "Sager lys og hyler sverdseremonier",
+      "eier": "Flamme-Frida"
+    },
+    {
+      "id": 30,
+      "navn": "Klin & Kloss Tapetsering",
+      "adresse": "Stoffstien 42",
+      "beskrivelse": "Tapetserer vegger med ansiktstrykk",
+      "eier": "Mønster-Marius"
+    },
+    {
+      "id": 31,
+      "navn": "Snodig & Snakk Turistkontor",
+      "adresse": "Guidegaten 44",
+      "beskrivelse": "Viser fram Pjuskeby's hemmelige snusk",
+      "eier": "Kart-Kaj"
+    },
+    {
+      "id": 32,
+      "navn": "Ståk & Strøk Husvask",
+      "adresse": "Pussestien 45",
+      "beskrivelse": "Vasker så det gnistrer (inkludert naboens windows)",
+      "eier": "Svaber-Svein"
+    },
+    {
+      "id": 33,
+      "navn": "Tøys & Tål Låsemslaug",
+      "adresse": "Lukketunet 46",
+      "beskrivelse": "Låser alt, åpner ingenting",
+      "eier": "Låsknask-Laila"
+    },
+    {
+      "id": 34,
+      "navn": "Knirke & Knas Snekkermester",
+      "adresse": "Barkegata 48",
+      "beskrivelse": "Fikser stoler som skranglet før du satt",
+      "eier": "Høvel-Hans"
+    },
+    {
+      "id": 35,
+      "navn": "Fjas & Flen Dramatisk Teater",
+      "adresse": "Scenelysveien 49",
+      "beskrivelse": "Spiller klassikere på overraskende vis",
+      "eier": "Applaus-Anna"
+    },
+    {
+      "id": 36,
+      "navn": "Smell & Smask Pølsemakeri",
+      "adresse": "Grillstrøket 50",
+      "beskrivelse": "Lager pølser som eksploderer av smak",
+      "eier": "Pölse-Per"
+    },
+    {
+      "id": 37,
+      "navn": "Lunken & Lurven Badstue",
+      "adresse": "Dampstien 51",
+      "beskrivelse": "Svett terapi for skeptikere",
+      "eier": "Svettesnild-Signe"
+    },
+    {
+      "id": 38,
+      "navn": "Knot & Knurring Bilvask",
+      "adresse": "Såpevannet 52",
+      "beskrivelse": "Skrubber biler i natten for ekstra dramatikk",
+      "eier": "Bøtte-Bård"
+    },
+    {
+      "id": 39,
+      "navn": "Fjas & Flak Risikovurdering",
+      "adresse": "Sikkerhetsstien 54",
+      "beskrivelse": "Forteller deg alt som kan gå galt… og litt til",
+      "eier": "Risiko-Rune"
+    },
+    {
+      "id": 40,
+      "navn": "Tøy og Teaser Quizbar",
+      "adresse": "Hjernevriderbakken 55",
+      "beskrivelse": "Quiz hvor alle svar er gale",
+      "eier": "Quiz-Qerden"
+    },
+    {
+      "id": 41,
+      "navn": "Gnål & Gnikk Gjenstander",
+      "adresse": "Pussegata 56",
+      "beskrivelse": "Polerer alt som faller i fisk",
+      "eier": "Puss-Perle"
+    },
+    {
+      "id": 42,
+      "navn": "Svig & Svuff Snegletransport",
+      "adresse": "Slimløkka 57",
+      "beskrivelse": "Tar deg frem med supereffektiv sniglefart",
+      "eier": "Slurf-Snorre"
+    },
+    {
+      "id": 43,
+      "navn": "Hurlumhei Husflid",
+      "adresse": "Strikkesmauet 58",
+      "beskrivelse": "Lager skulpturer av gamle sokker",
+      "eier": "Form-Finn"
+    },
+    {
+      "id": 44,
+      "navn": "Sprø & Sprett Trampolinepark",
+      "adresse": "Sprettsenteret 59",
+      "beskrivelse": "Sprett selv om du ikke kan",
+      "eier": "Luftiga-Liv"
+    },
+    {
+      "id": 45,
+      "navn": "Fnugg & Fjell Skianlegg",
+      "adresse": "Snøstien 60",
+      "beskrivelse": "Klatrer nedover bakker baklengs",
+      "eier": "Skudd-Simon"
+    },
+    {
+      "id": 46,
+      "navn": "Tøysekjøkken Matlagingskurs",
+      "adresse": "Grytestien 61",
+      "beskrivelse": "Lærer deg å lage brente retter",
+      "eier": "Brent-Berit"
+    },
+    {
+      "id": 47,
+      "navn": "Krøll & Knute Frisør",
+      "adresse": "Saksebakken 62",
+      "beskrivelse": "Krøller alt unntatt håret ditt",
+      "eier": "Krøll-Kim"
+    },
+    {
+      "id": 48,
+      "navn": "Sprattel Snapsbrenneri",
+      "adresse": "Brenneveien 63",
+      "beskrivelse": "Produserer snurrende nubbe",
+      "eier": "Svidde-Svea"
+    },
+    {
+      "id": 49,
+      "navn": "Fjasotrykkeriet",
+      "adresse": "Blekkgnisten 64",
+      "beskrivelse": "Printer vitser som knuser stil",
+      "eier": "Trykk-Tor"
+    },
+    {
+      "id": 50,
+      "navn": "Klimpr & Klunk Gitarverksted",
+      "adresse": "Strengesvingen 65",
+      "beskrivelse": "Fikser gitarer som hyler",
+      "eier": "Riff-Runa"
+    },
+    {
+      "id": 51,
+      "navn": "Tull & Tøys Bokhandel",
+      "adresse": "Sidestykka 66",
+      "beskrivelse": "Selger bøker med blanke sider",
+      "eier": "Bok-Berit"
+    },
+    {
+      "id": 52,
+      "navn": "Rabalder Radiobruk",
+      "adresse": "Sendebakken 67",
+      "beskrivelse": "Sender øyeblikkelige latteranfall",
+      "eier": "FM-Frode"
+    },
+    {
+      "id": 53,
+      "navn": "Fnise & Fase Hudpleie",
+      "adresse": "Glansgata 68",
+      "beskrivelse": "Skrubber vekk realisme",
+      "eier": "Smuss-Siri"
+    },
+    {
+      "id": 54,
+      "navn": "Pjuskeby Paté Slakteri",
+      "adresse": "Køttkvernen 69",
+      "beskrivelse": "Limer kjøttbiter i fantasifulle former",
+      "eier": "Kjøtt-Knut"
+    },
+    {
+      "id": 55,
+      "navn": "Røsk & Ryst Mekanisk Workshop",
+      "adresse": "Vibrasjonsveien 70",
+      "beskrivelse": "Limer på ekstra gir",
+      "eier": "Girkasse-Gunnar"
+    },
+    {
+      "id": 56,
+      "navn": "Latter & Løft Treningssenter",
+      "adresse": "Muskelgata 71",
+      "beskrivelse": "Gir deg latterkrampe, ikke styrke",
+      "eier": "Svettsalv-Stian"
+    },
+    {
+      "id": 57,
+      "navn": "Tyttebær & Tull Syltefabrikk",
+      "adresse": "Sylteløkka 72",
+      "beskrivelse": "Vakumpakker tøyseverdier",
+      "eier": "Glasur-Gunnar"
+    },
+    {
+      "id": 58,
+      "navn": "Knirk & Knusk Antikvitetsbutikk",
+      "adresse": "Ruststrøket 73",
+      "beskrivelse": "Selger skatter som ingen vil ha",
+      "eier": "Skrot-Signe"
+    },
+    {
+      "id": 59,
+      "navn": "Fnugg & Flamme Fyrverkeri",
+      "adresse": "Eksplosjonsveien 74",
+      "beskrivelse": "Setter fyr på alt unntatt revisoren",
+      "eier": "Rakett-Randi"
+    },
+    {
+      "id": 60,
+      "navn": "Smell & Stryk Skredder'n",
+      "adresse": "Stoffsløyfa 75",
+      "beskrivelse": "Sy om feil til enda verre feil",
+      "eier": "Nål-Niklas"
+    },
+    {
+      "id": 61,
+      "navn": "Bæsj & Brøl Barnepark",
+      "adresse": "Tulleparken 76",
+      "beskrivelse": "Lar barna slippe ut sin indre elg",
+      "eier": "Sprett-Sølvi"
+    },
+    {
+      "id": 62,
+      "navn": "Flimre & Flaske Lysfabrikk",
+      "adresse": "Glødgata 77",
+      "beskrivelse": "Lager lamper som flimrer av seg selv",
+      "eier": "Pære-Peter"
+    },
+    {
+      "id": 63,
+      "navn": "Sprøyt & Sprut Bilpuss",
+      "adresse": "Lakksvingen 78",
+      "beskrivelse": "Farger bilene dine i usynlig maling",
+      "eier": "Lakk-Linn"
+    },
+    {
+      "id": 64,
+      "navn": "Svims & Svimmel Turselskap",
+      "adresse": "Høydepunktbakken 79",
+      "beskrivelse": "Tar deg med til stup du aldri vil se",
+      "eier": "Vertigo-Vidar"
+    },
+    {
+      "id": 65,
+      "navn": "Tøyse & Tapas Gastrobar",
+      "adresse": "Delikatessdråpen 80",
+      "beskrivelse": "Kombinerer lutefisk og sjokolade",
+      "eier": "Smak-Silje"
+    },
+    {
+      "id": 66,
+      "navn": "Krakel & Krakel Kunstgalleri",
+      "adresse": "Penselplassen 81",
+      "beskrivelse": "Henger opp lerreter du kan skli på",
+      "eier": "Staffeli-Stine"
+    },
+    {
+      "id": 67,
+      "navn": "Fnatt & Fnugg Snøskuterutleie",
+      "adresse": "Pulkkelveien 82",
+      "beskrivelse": "Kjører deg gjennom alle gjenglemte votter",
+      "eier": "Gummibob-Gunnar"
+    },
+    {
+      "id": 68,
+      "navn": "Rabalder Recycling",
+      "adresse": "Ombruksbakken 83",
+      "beskrivelse": "Gjør alt gammelt enda eldre",
+      "eier": "Gjenbruks-Guri"
+    },
+    {
+      "id": 69,
+      "navn": "Sprøtt & Sprut Trykkeri",
+      "adresse": "Blekkbølgen 84",
+      "beskrivelse": "Printer baklengs, bare for spenning",
+      "eier": "Papir-Paul"
+    },
+    {
+      "id": 70,
+      "navn": "Kjør'n & Kjapp Budservice",
+      "adresse": "Rasketrasèen 85",
+      "beskrivelse": "Leverer posten to timer for sent",
+      "eier": "Brev-Berit"
+    },
+    {
+      "id": 71,
+      "navn": "Jøss & Javn Regnskapsfører'n",
+      "adresse": "Økonomigarden 86",
+      "beskrivelse": "Feil fører til latter, ikke krise",
+      "eier": "Minus-Marianne"
+    },
+    {
+      "id": 72,
+      "navn": "Smask & Smile Kondomkiosk",
+      "adresse": "Trygghetstorget 87",
+      "beskrivelse": "Selger kondomer med mønster av pingviner",
+      "eier": "Reform-Roar"
+    },
+    {
+      "id": 73,
+      "navn": "Tøys & Trikse Sirkusskole",
+      "adresse": "Sirkelarenaen 88",
+      "beskrivelse": "Lærer deg å balansere fantasi",
+      "eier": "Klovnen Knut"
+    },
+    {
+      "id": 74,
+      "navn": "Røs & Rabalder Hobbybutikk",
+      "adresse": "Kreativveien 89",
+      "beskrivelse": "Selger lim som fester deg til stolen",
+      "eier": "Hobby-Helen"
+    },
+    {
+      "id": 75,
+      "navn": "Fnatt & Fjusk Murervirksomhet",
+      "adresse": "Teglstenbakken 90",
+      "beskrivelse": "Murereete vegger som skråner bakover",
+      "eier": "Puss-Påler"
+    },
+    {
+      "id": 76,
+      "navn": "Sprø & Sprett Luftballong",
+      "adresse": "Høydehoppvingen 91",
+      "beskrivelse": "Tar deg opp og glemmer å få deg ned igjen",
+      "eier": "Ballong-Berit"
+    },
+    {
+      "id": 77,
+      "navn": "Fnugg & Fnakk Lydisolasjon",
+      "adresse": "Stillhetsnabo 92",
+      "beskrivelse": "Isolerer støy, promoterer hemmelighold",
+      "eier": "Demp-Dagny"
+    },
+    {
+      "id": 78,
+      "navn": "Smekk & Smil Tannhjulservice",
+      "adresse": "Geargata 93",
+      "beskrivelse": "Smører gir så de ler av lettelse",
+      "eier": "Gear-Gudrun"
+    },
+    {
+      "id": 79,
+      "navn": "Tøyse & Tilsyn Dyrepass",
+      "adresse": "Pelsparken 94",
+      "beskrivelse": "Passer alle dyr bortsett fra gullfisk",
+      "eier": "Klo-Kristin"
+    },
+    {
+      "id": 80,
+      "navn": "Rabalder Robotikk",
+      "adresse": "Mekanotronveien 95",
+      "beskrivelse": "Lager roboter som diller med politikere",
+      "eier": "Servo-Svein"
+    },
+    {
+      "id": 81,
+      "navn": "Sprø & Smekk Limteknikk",
+      "adresse": "Superlimsiden 96",
+      "beskrivelse": "Når det først fester seg, sitter du fast",
+      "eier": "Lim-Lars"
+    },
+    {
+      "id": 82,
+      "navn": "Fnise & Fjas Smykkedesign",
+      "adresse": "Glittergaten 97",
+      "beskrivelse": "Skaper smykker som kiler nakken",
+      "eier": "Pynt-Pia"
+    },
+    {
+      "id": 83,
+      "navn": "Brøl & Bris Yogasenter",
+      "adresse": "Zenbakken 98",
+      "beskrivelse": "Lærer deg å brøle i meditasjon",
+      "eier": "Ommm-Ole"
+    },
+    {
+      "id": 84,
+      "navn": "Sprut & Sprak Fargesalong",
+      "adresse": "Regnbueløkka 99",
+      "beskrivelse": "Maler veggene i alt du drømmer",
+      "eier": "Palett-Pernille"
+    },
+    {
+      "id": 85,
+      "navn": "Fnatt & Fnask Stormagasin",
+      "adresse": "Shoppingstrøket 100",
+      "beskrivelse": "Selger alt du ikke visste du ikke trengte",
+      "eier": "Salg-Silje"
+    },
+    {
+      "id": 86,
+      "navn": "Rabalder Racing Simulator",
+      "adresse": "Speedstien 101",
+      "beskrivelse": "Gir deg kvalme uten å bevege deg",
+      "eier": "G-Kraft-Gunnar"
+    },
+    {
+      "id": 87,
+      "navn": "Tøyse & Tørst Ølbryggeri",
+      "adresse": "Humletunet 102",
+      "beskrivelse": "Brygger øl med ekstra lattergas",
+      "eier": "Skum-Siv"
+    },
+    {
+      "id": 88,
+      "navn": "Fnise & Frikjøring Alpintsenter",
+      "adresse": "Skimorebakken 103",
+      "beskrivelse": "Åpner løyper for bakke-hopping",
+      "eier": "Slalom-Solfrid"
+    },
+    {
+      "id": 89,
+      "navn": "Smekk & Smell Klesvasker'n",
+      "adresse": "Skumpstrøket 104",
+      "beskrivelse": "Krymper klær for stilens skyld",
+      "eier": "Skrynkla-Sabrina"
+    },
+    {
+      "id": 90,
+      "navn": "Rabalder Rørlegger'n",
+      "adresse": "Lekkasjebakken 105",
+      "beskrivelse": "Tar rør i bruk som kunstinstallasjon",
+      "eier": "Rör-Rigmor"
+    },
+    {
+      "id": 91,
+      "navn": "Tøysekamera Fotoatelier",
+      "adresse": "Blitsgata 106",
+      "beskrivelse": "Tar bilder som himler øynene dine",
+      "eier": "Klikk-Klara"
+    },
+    {
+      "id": 92,
+      "navn": "Fnugg & Fuss Frisører'n",
+      "adresse": "Hårstrøket 107",
+      "beskrivelse": "Klipper i blinde med stil",
+      "eier": "Saks-Svea"
+    },
+    {
+      "id": 93,
+      "navn": "Sprø & Sprøt Ballongdyr",
+      "adresse": "Festplassen 108",
+      "beskrivelse": "Lager dyr av ballonger… som sprekker",
+      "eier": "Luft-Laila"
+    },
+    {
+      "id": 94,
+      "navn": "Rabalder Radiatorservice",
+      "adresse": "Varmesirkelen 109",
+      "beskrivelse": "Gjør at du fryser i sommervarmen",
+      "eier": "Panne-Pål"
+    },
+    {
+      "id": 95,
+      "navn": "Tøys & Trollved Kundemottak",
+      "adresse": "IkkeNødvendiggata 110",
+      "beskrivelse": "Hjelper deg å klage på alt og ingenting",
+      "eier": "Klage-Knut"
+    },
+    {
+      "id": 96,
+      "navn": "Fnise & Fusk Gamingcafé",
+      "adresse": "Joystickveien 111",
+      "beskrivelse": "Taper for barna, vinner latteren",
+      "eier": "Pixel-Per"
+    },
+    {
+      "id": 97,
+      "navn": "Sprø & Sprell Lystogpåfyll",
+      "adresse": "Knakendevei 112",
+      "beskrivelse": "Gir toget latterlig mange stopp",
+      "eier": "Skinnespreller-Svein"
+    },
+    {
+      "id": 98,
+      "navn": "Fnugg & Flesk Spekematutsalg",
+      "adresse": "Saltingbakken 113",
+      "beskrivelse": "Speker kjøtt i egen latter",
+      "eier": "Speke-Siv"
+    },
+    {
+      "id": 99,
+      "navn": "Rabalder Røykeri",
+      "adresse": "Røykstien 114",
+      "beskrivelse": "Røyker alt, også historier",
+      "eier": "Røyk-Rune"
+    },
+    {
+      "id": 100,
+      "navn": "Tøyse & Torden Værstasjon",
+      "adresse": "Skyskrubberveien 115",
+      "beskrivelse": "Varsler uvær med trommesolo",
+      "eier": "Lyn-Ludvik"
+    }
+  ],
+  "metadata": {
+    "totalt_bedrifter": 100,
+    "stil": "Kjell Aukrust-inspirert",
+    "format": "Tulleavisa",
+    "opprettet": "2025-05-30",
+    "inspirasjon": "Flåklypa Grand Prix universet"
+  }
+}

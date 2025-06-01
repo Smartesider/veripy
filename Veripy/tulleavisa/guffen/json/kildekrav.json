@@ -1,0 +1,46 @@
+{
+  "navn": "kildekrav.json",
+  "versjon": "2025-05-30",
+  "kildevalg": {
+    "kildeprioritering": [
+      "lokalaviser.json",
+      "pjuskeby.json",
+      "pjuskebyverden.json",
+      "land.json",
+      "byer_tulleavisa.json",
+      "ledere.json",
+      "organisasjoner.json"
+    ],
+    "variere_kilde": true,
+    "unngå_repetisjon": true,
+    "minst_en_hovedkilde_per_artikkel": true,
+    "krav_til_kildefelt": [
+      "tittel",
+      "url",
+      "tullenavn",
+      "ektnavn",
+      "beskrivelse"
+    ],
+    "minst_en_by": true,
+    "minst_et_land": true,
+    "minst_en_leder": true,
+    "minst_en_organisasjon": true
+  },
+  "kildepresentasjon": {
+    "format": "{TULLENAVN} ({EKTENAVN}) – [beskrivelse]",
+    "lenke": "Alltid klikkbar, humoristisk begrunnelse",
+    "tullekilde": "Tillatt, men må alltid merkes tydelig"
+  },
+  "json_analyse": {
+    "hent_alltid_fra": [
+      "pjuskeby.json",
+      "pjuskebyverden.json",
+      "lokalaviser.json",
+      "land.json",
+      "byer_tulleavisa.json",
+      "ledere.json",
+      "organisasjoner.json"
+    ],
+    "obligatorisk_felt": ["tullenavn", "ektnavn", "beskrivelse"]
+  }
+}

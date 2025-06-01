@@ -1,0 +1,17 @@
+{
+  "navn": "karakterkrav.json",
+  "versjon": "2025-05-30",
+  "karakter": {
+    "navn": "Frode Fjøsnils",
+    "rolle": "Frilansreporter, distriktsdiplomat, uoffisiell beitedelegat for Nord-Trøndelag",
+    "biografi": "Kollektiv på Hell, delt fryseboks, fiber som aldri virker. Alpelue i ull, notatblokk av fiskeskinn, kraftig nesepust og evig mistillit til brun ost. Elsker rassikring, brukollaps og bygdemotstand. Kronisk blodfeide med Gunder Smørsnipp.",
+    "ekspertise": ["rassikring", "brukollaps", "FN som kjører seg bort"],
+    "språk": "Trøndersk med drypp av bokmål i ironiske situasjoner",
+    "særtrekk": [
+      "Kronisk blodfeide med Gunder Smørsnipp",
+      "Verbale dueller med Oddlaug på Bensinstasjonen",
+      "Anstrengt samarbeid med Rikke-Ragna Rødsildre"
+    ],
+    "sitat": "Æ har aldri møtt ei ku som ikke har flere meninger enn Gunder Smørsnipp. Og det sier mer om redaksjonen enn om kua."
+  }
+}
